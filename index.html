@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
-    <h1>Entrar</h1>
-    <form>
-        <input type="text" id="email" placeholder="Email ou número de celular"><br>
-        <input type="password" placeholder="Senha">
-        
-    
-    </form>
+    <img src="logo.png" alt="logo da netflix">
+    <form id="form">
+    <div class="container">
+            <h1>Entrar</h1>
+            <div class="inputs">
+                <input type="text" name="email" id="email" autocomplete="off" class="input required" placeholder="Email ou número de celular">
+                
+            </div>
+            <div class="inputs">
+                <input type="password" id="sh" class="input required"  placeholder="Senha">
+            </div>
+
+            <button type="submit" id="vermelho">Entrar</button>
+            <p id="mequetrefe">OU</p>
+            <button type="submit" id="cinza">Usar um código de acesso</button>
+        </form>
+            <br>
+            <a href="#" id="senha"><p>Esqueceu a senha?</p></a>
+
+            <div>
+                <input type="checkbox" id="check" checked>
+                <label for="check">Lembre-se de mim</label>
+                <p id="novo">Novo por aqui?<a href="#" id="assine"> Assine agora</a></p>
+            </div>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>

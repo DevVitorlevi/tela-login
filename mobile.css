@@ -1,0 +1,116 @@
+:root{
+    --font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --color1:#fff;
+    --color2:#C11119;
+    --color3:#e40914;
+    --color4:#000;
+    --color5:#333333;
+    --color6:#272727;
+    --color7:#0F0F0F;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    margin-bottom: 28px;
+}
+img{
+    width: 90px;
+    position:absolute;
+    top: 18px;
+    left: 16px;
+
+}
+body{
+    font-family: var(--font);
+    color: var(--color1);
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: normal;
+}
+.inputs{
+    position: relative;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+form{
+    margin-top:65px
+}
+.inputs input{
+    width: 100%;
+    font-size: 18px;
+    padding: 24px 16px 8px;
+    background-color:#0F0F0F;
+    border-radius: 5px;
+    border: 2px solid var(--color5);
+    height: 56px;
+    color: white;
+}
+input::placeholder{
+    color: #fff;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    z-index: 0000;
+}
+.inputs input:focus ~ .label{
+    display: none;
+}
+button[type=submit]{
+    padding: 13px;
+    width: 90vw;
+    font-size: 14px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--color1);
+    cursor: pointer;
+}
+#mequetrefe{
+    text-align: center;
+}
+#vermelho{
+    background-color: var(--color3);
+}
+#cinza{
+    background-color: var(--color5); 
+}
+#vermelho:hover{
+    background-color: var(--color2);
+}
+#cinza:hover{
+    background-color: var(--color6);
+}
+#senha{
+    color: var(--color1);
+    text-decoration:none;
+    text-align: center; 
+}
+#senha:hover{
+    text-decoration: underline;
+}
+p#novo{
+    text-align: left;
+    margin-top: 15px;  
+}
+a{
+    text-decoration: none;
+    color: var(--color1);
+}
+a:hover{
+    text-decoration: underline;
+}
+#assine{
+    font-weight: bold;
+}
+
+
