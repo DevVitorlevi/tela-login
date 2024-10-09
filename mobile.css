@@ -33,13 +33,14 @@ body{
     justify-content:center;
     align-items: normal;
 }
+
 .inputs{
     position: relative;
 }
 .container{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 form{
@@ -60,10 +61,6 @@ input::placeholder{
     position: absolute;
     top: 18px;
     left: 20px;
-    z-index: 0000;
-}
-.inputs input:focus ~ .label{
-    display: none;
 }
 button[type=submit]{
     padding: 13px;
@@ -112,5 +109,12 @@ a:hover{
 #assine{
     font-weight: bold;
 }
-
+.span-required{
+    display: none;
+    color:var(--color3);
+    font-size: 15px;
+}
+input:focus{
+    outline: none;
+}
 
