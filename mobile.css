@@ -1,120 +1,234 @@
-:root{
-    --font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --color1:#fff;
-    --color2:#C11119;
-    --color3:#e40914;
-    --color4:#000;
-    --color5:#333333;
-    --color6:#272727;
-    --color7:#0F0F0F;
-}
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    transition: 0.4s;
 }
-h1{
-    margin-bottom: 28px;
-}
-img{
-    width: 90px;
-    position:absolute;
-    top: 18px;
-    left: 16px;
 
+:root {
+    --color-black: #000000;
+    --color-red: #e50914;
+    --color-red-hover: #c11119;
+    --color-cinza: #333333;
+    --color-cinza-hover: #272727;
+    --color-input: #0F0F0F;
+    --color-desgraça: #33333357;
 }
-body{
-    font-family: var(--font);
-    color: var(--color1);
-    background-color: #000;
-    height: 100vh;
-    width: 100%;
+
+body {
+    background-color: var(--color-black);
+}
+
+picture {
     display: flex;
-    justify-content:center;
-    align-items: normal;
+    justify-content: start;
+    align-items: flex-start;
+
+    padding: 4px;
+
+    padding: 20px;
 }
 
-.inputs{
+#logo {
+    width: 22%;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+main {
+    height: 75dvh;
+    display: flex;
+    justify-items: center;
+}
+
+.container {
+    display: flex;
+    gap: 15px;
+    flex-flow: column;
+    padding-left: 23px;
+
+}
+
+/*Formulário*/
+.input input {
+    padding: 24px 16px 8px;
+    border-radius: 5px;
+    width: 95%;
+    font-size: 16px;
+    background-color: var(--color-input);
+    border: 0.5px solid rgb(97, 86, 86);
+}
+
+.input {
     position: relative;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+.input label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    text-indent: 15px;
+    pointer-events: none;
 }
 
-form{
-    margin-top:65px
+/* Quando o input for preenchido automaticamnte a cor do input e o texto ira trocar de cor*/
+.input input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 40px #1C2432 inset;
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+
 }
-.inputs input{
-    width: 100%;
-    font-size: 18px;
-    padding: 24px 16px 8px;
-    background-color:#0F0F0F;
-    border-radius: 5px;
-    border: 2px solid var(--color5);
-    height: 56px;
-    color: white;
-}
-input::placeholder{
-    color: #fff;
-    position: absolute;
+
+.input input:focus~label,
+.input input:valid~label {
     top: 18px;
-    left: 20px;
-}
-button[type=submit]{
-    padding: 13px;
-    width: 90vw;
     font-size: 14px;
+    text-indent: 12px;
+}
+
+/*Botões e Links*/
+
+#entrar {
+    background-color: var(--color-red);
+    font-size: 16px;
+    font-weight: bold;
+    width: 95%;
+    padding: 10px;
     border: 0;
     border-radius: 5px;
-    font-weight: bold;
-    color: var(--color1);
-    cursor: pointer;
-}
-#mequetrefe{
-    text-align: center;
-}
-#vermelho{
-    background-color: var(--color3);
-}
-#cinza{
-    background-color: var(--color5); 
-}
-#vermelho:hover{
-    background-color: var(--color2);
-}
-#cinza:hover{
-    background-color: var(--color6);
-}
-#senha{
-    color: var(--color1);
-    text-decoration:none;
-    text-align: center; 
-}
-#senha:hover{
-    text-decoration: underline;
-}
-p#novo{
-    text-align: left;
-    margin-top: 15px;  
-}
-a{
-    text-decoration: none;
-    color: var(--color1);
-}
-a:hover{
-    text-decoration: underline;
-}
-#assine{
-    font-weight: bold;
-}
-.span-required{
-    display: none;
-    color:var(--color3);
-    font-size: 15px;
-}
-input:focus{
-    outline: none;
+
 }
 
+#ou {
+    text-align: center;
+    margin-right: 25px;
+}
+
+#codigo {
+    font-size: 16px;
+    font-weight: bold;
+    width: 95%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--color-cinza);
+}
+
+#entrar:hover {
+    background-color: var(--color-red-hover);
+}
+
+#codigo:hover {
+    background-color: var(--color-cinza-hover);
+}
+
+#custom-checkbox input {
+    display: none;
+    cursor: pointer;
+}
+
+#custom-checkbox input+label:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid white;
+    background-color: #000000;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: bottom;
+
+}
+
+#custom-checkbox input:checked+label:before {
+    background-color: #ffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check-lg' viewBox='0 0 16 16'%3E%3Cpath d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z'/%3E%3C/svg%3E");
+    background-position: center center;
+    border: none;
+    padding: 1px;
+}
+
+#esqueceu {
+    display: flex;
+    justify-content: center;
+    margin-right: 25px;
+    text-decoration: none;
+}
+
+#esqueceu:hover {
+    text-decoration: underline;
+}
+
+#assine {
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: bold;
+
+}
+
+#assine:hover {
+    text-decoration: underline;
+}
+
+#capt {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+#capt #mais {
+    background: transparent;
+    border: 0;
+    color: #0080FF;
+}
+
+.rest {
+    text-decoration: none;
+    color: #0080FF;
+}
+
+.rest:hover {
+    text-decoration: underline;
+}
+
+#escondido {
+    margin-top: 22px;
+    display: none;
+    transition: 0.5s;
+}
+
+/*Footer*/
+footer {
+    border-top: 1px solid white;
+    display: flex;
+    gap: 20px;
+    flex-flow: column wrap;
+    padding: 34px 18px 6px;
+}
+
+footer ul {
+    list-style-type: none;
+    columns: 2;
+}
+
+footer ul li {
+    margin-bottom: 20px;
+}
+
+#telefone {
+    text-decoration: none;
+}
+
+#telefone:hover {
+    text-decoration: underline;
+
+}
