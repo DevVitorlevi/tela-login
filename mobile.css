@@ -14,7 +14,7 @@
     --color-cinza: #333333;
     --color-cinza-hover: #272727;
     --color-input: #0F0F0F;
-    --color-desgraça: #33333357;
+    --color-transparente: #33333357;
 }
 
 body {
@@ -71,12 +71,21 @@ main {
 
 .input label {
     position: absolute;
-    top: 50%;
-    left: 5px;
+    top: 28px;
+    left: 15px;
     transform: translateY(-50%);
     font-size: 18px;
-    text-indent: 15px;
+
     pointer-events: none;
+}
+
+.required {
+    font-size: 13px;
+    color:
+        rgb(235, 57, 66);
+
+    display: none;
+    margin-top: 7px;
 }
 
 /* Quando o input for preenchido automaticamnte a cor do input e o texto ira trocar de cor*/
@@ -230,5 +239,4 @@ footer ul li {
 
 #telefone:hover {
     text-decoration: underline;
-
 }
