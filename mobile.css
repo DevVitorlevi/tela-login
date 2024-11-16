@@ -4,7 +4,17 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    transition: 0.4s;
+
+}
+
+@keyframes apareceu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 :root {
@@ -42,7 +52,7 @@ h1 {
 }
 
 main {
-    height: 75dvh;
+    height: 80dvh;
     display: flex;
     justify-items: center;
 }
@@ -79,7 +89,7 @@ main {
     pointer-events: none;
 }
 
-.required {
+.p-required {
     font-size: 13px;
     color:
         rgb(235, 57, 66);
@@ -99,7 +109,7 @@ main {
 .input input:valid~label {
     top: 18px;
     font-size: 14px;
-    text-indent: 12px;
+
 }
 
 /*Botões e Links*/
@@ -212,7 +222,8 @@ main {
 #escondido {
     margin-top: 22px;
     display: none;
-    transition: 0.5s;
+    animation: apareceu 1.5s;
+
 }
 
 /*Footer*/

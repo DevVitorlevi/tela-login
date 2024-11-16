@@ -21,7 +21,7 @@
     #logo {
         z-index: 2;
         width: 100px;
-        margin-left: 100px;
+        margin-left: 10px;
 
     }
 
@@ -43,7 +43,7 @@
 
     main {
         background-color: rgba(0, 0, 0, 0.664);
-        width: 450px;
+        width: 440px;
         padding-top: 40px;
         padding-left: 40px;
         padding-right: 40px;
@@ -118,7 +118,7 @@
 
     main {
         background-color: rgba(0, 0, 0, 0.664);
-        width: 450px;
+        width: 440px;
         padding-top: 40px;
         padding-left: 40px;
         padding-right: 40px;
@@ -147,8 +147,7 @@
         columns: 4;
     }
 
-    footer p,
-    a {
+    footer p {
         padding-top: 40px;
     }
 }
@@ -175,8 +174,17 @@
 
     #logo {
         z-index: 2;
-        width: 170px;
-        margin-left: 5px;
+        width: 150px;
+        display: block;
+        margin: auto;
+
+
+    }
+
+    picture {
+        width: 45%;
+        display: flex;
+        padding: 15px;
 
     }
 
@@ -198,7 +206,7 @@
 
     main {
         background-color: rgba(0, 0, 0, 0.664);
-        width: 450px;
+        width: 440px;
         padding-top: 40px;
         padding-left: 40px;
         padding-right: 40px;
@@ -227,8 +235,13 @@
         columns: 4;
     }
 
-    footer p,
-    a {
+    footer p {
         padding-top: 40px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .p-required {
+        font-size: 12px;
     }
 }
